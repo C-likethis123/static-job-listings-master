@@ -1,10 +1,10 @@
 import React from 'react';
 
 import data from "src/data.json";
-
+import Job from "./Job";
 const JobList: React.FC = () => {
   return (<div>
-    {data.map(({position}) => <div>{position}</div>)}
+    {data.map(({id, ...rest}) => <Job key={id} {...rest} />)}
   </div>);
 };
 
