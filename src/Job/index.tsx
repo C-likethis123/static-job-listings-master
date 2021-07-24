@@ -3,7 +3,7 @@ import React from 'react';
 /** Components */
 import ToolList from "src/ToolList";
 import {NewTag, FeaturedTag} from "src/Tags";
-
+import Image from "src/Image";
 import './index.css';
 
 type JobProps = {
@@ -37,7 +37,7 @@ const Job: React.FC<JobProps> = ({
 }: JobProps) => {
   return (
     <div className="container">
-      {/* Image here */}
+      <Image src={logo} />
       <div>
         <div>
           <span className="company">{company}</span>
