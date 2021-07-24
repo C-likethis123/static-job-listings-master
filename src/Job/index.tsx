@@ -1,7 +1,10 @@
 import React from 'react';
 
 /** Components */
-import ToolList from "./ToolList";
+import ToolList from "src/ToolList";
+import {NewTag, FeaturedTag} from "src/Tags";
+
+import './index.css';
 
 type JobProps = {
   company: string;
@@ -33,14 +36,14 @@ const Job: React.FC<JobProps> = ({
   tools,
 }: JobProps) => {
   return (
-    <div>
-      {/* Image here }
+    <div className="container">
+      {/* Image here */}
       <div>
-        <Company company={company} />
-        {new && <NewTag />}
-        {featured && <Featured />}
+        <span className="company">{company}</span>
+        {isNew && <NewTag />}
+        {featured && <FeaturedTag />}
       </div>
-      <PositionTitle position={position} />
+      {/*<PositionTitle position={position} />
       <Trivia postedAt={postedAt} contract={contract} location={location} />
       */}
       <ToolList role={role} languages={languages} tools={tools} level={level} />

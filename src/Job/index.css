@@ -1,0 +1,15 @@
+.container {
+   display: flex;
+}
+
+.container > div {
+   margin-right: 20px;
+}
+
+.company {
+  font-size: 0.9375rem; 
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+
