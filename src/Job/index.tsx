@@ -45,8 +45,11 @@ const Job: React.FC<JobProps> = ({
           {featured && <FeaturedTag />}
         </div>
         <div className="position-title">{position}</div>
-        {/*<Trivia postedAt={postedAt} contract={contract} location={location} />
-      */}
+        <div className="trivia">
+          <span>{postedAt}</span>
+          <span>{contract}</span>
+          <span>{location}</span>
+        </div>
       </div>
       <ToolList role={role} languages={languages} tools={tools} level={level} />
     </div>

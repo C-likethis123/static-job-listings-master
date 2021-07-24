@@ -19,3 +19,11 @@
   padding: 10px;
 }
 
+.trivia > span { 
+  color: hsl(180, 8%, 52%);
+}
+
+.trivia > span:not(:last-child):after {
+   content: " \2027 ";
+   padding: 7px;
+}
