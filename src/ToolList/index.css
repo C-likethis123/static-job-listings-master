@@ -1,5 +1,6 @@
 .tagcontainer {
    display: flex;
+   align-self: center;
 }
 
 .taginput {
