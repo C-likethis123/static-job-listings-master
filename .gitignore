@@ -1,1 +1,7 @@
 node_modules
+
+# Ignore vim swap files
+*.swp
+
+# Ignore production build
+dist
