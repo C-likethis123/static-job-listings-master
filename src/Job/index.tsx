@@ -37,18 +37,20 @@ const Job: React.FC<JobProps> = ({
 }: JobProps) => {
   return (
     <div className="container">
-      <Image src={logo} />
-      <div>
-        <div>
-          <span className="company">{company}</span>
-          {isNew && <NewTag />}
-          {featured && <FeaturedTag />}
-        </div>
-        <div className="position-title">{position}</div>
-        <div className="trivia">
-          <span>{postedAt}</span>
-          <span>{contract}</span>
-          <span>{location}</span>
+      <div className="position">
+        <Image src={logo} />
+        <div className="position-information">
+          <div>
+            <span className="company">{company}</span>
+            {isNew && <NewTag />}
+            {featured && <FeaturedTag />}
+          </div>
+          <div className="position-title">{position}</div>
+          <div className="trivia">
+            <span>{postedAt}</span>
+            <span>{contract}</span>
+            <span>{location}</span>
+          </div>
         </div>
       </div>
       <ToolList role={role} languages={languages} tools={tools} level={level} />
