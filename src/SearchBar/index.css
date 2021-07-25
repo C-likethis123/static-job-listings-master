@@ -1,0 +1,12 @@
+.container {
+  box-shadow: hsl(180, 29%, 50%) 0px 10px 20px -10px;
+  border-radius: 10px;
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.search {
+  width: 100%;
+  outline: none;
+}
