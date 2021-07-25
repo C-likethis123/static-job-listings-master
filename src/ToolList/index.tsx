@@ -1,5 +1,8 @@
 import React from 'react';
 
+/** Shared components */
+import FilterTag from 'src/Tags/FilterTags';
+
 import './index.css';
 
 type ToolListProps = {
@@ -17,10 +20,10 @@ const ToolList: React.FC<ToolListProps> = ({
 }) => {
   return (
     <div className="tagcontainer">
-      <div className="taginput">{role}</div>
-      <div className="taginput">{level}</div>
-      {languages.map((language) => <div key={language} className="taginput">{language}</div>)}
-      {tools.map((tool) => <div key={tool} className="taginput">{tool}</div>)}
+      <FilterTag>{role}</FilterTag>
+      <FilterTag>{level}</FilterTag>
+      {languages.map((language) => <FilterTag key={language}>{language}</FilterTag>)}
+      {tools.map((tool) => <FilterTag key={tool}>{tool}</FilterTag>)}
     </div>
   )
 }
