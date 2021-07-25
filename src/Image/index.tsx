@@ -7,7 +7,10 @@ type ImageProps = {
 }
 
 const Image: React.FC<ImageProps> = ({src}) => {
-  return (<img src={src} className={styles.logo} />);
+  const imgUrl = new URL(src, import.meta.url);
+  //@ts-ignore
+  return (<img src={imgUrl} className="logo" />);
 }
 
 export default Image;
+
