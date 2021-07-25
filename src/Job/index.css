@@ -33,6 +33,11 @@
   padding: 10px 0px;
 }
 
+.position-title:hover {
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+
 .trivia > span { 
   color: hsl(180, 8%, 52%);
 }
