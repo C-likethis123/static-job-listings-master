@@ -1,29 +1,18 @@
 import React from 'react';
 
-/** Shared components */
-import FilterTag from 'src/Tags/FilterTags';
-
+/** Types */
 import './index.css';
 
 type ToolListProps = {
-  tools: string[];
-  role: string;
-  level: string;
-  languages: string[];
+  children: React.ReactElement | React.ReactElement[],
 }
 
 const ToolList: React.FC<ToolListProps> = ({
-  tools,
-  role,
-  level,
-  languages,
+  children,
 }) => {
   return (
     <div className="tagcontainer">
-      <FilterTag>{role}</FilterTag>
-      <FilterTag>{level}</FilterTag>
-      {languages.map((language) => <FilterTag key={language}>{language}</FilterTag>)}
-      {tools.map((tool) => <FilterTag key={tool}>{tool}</FilterTag>)}
+      {children}
     </div>
   )
 }

@@ -4,12 +4,12 @@ import React from 'react';
 import './index.css';
 
 type FilterTagProps = {
-  isCancelable: boolean;
+  isCancelable?: boolean;
   children: string;
 }
 
 const FilterTag: React.FC<FilterTagProps> = ({
-  isCancelable,
+  isCancelable = false,
   children,
   }) => {
   return <div className="taginput">{children}</div>

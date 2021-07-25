@@ -4,6 +4,7 @@ import React from 'react';
 import ToolList from "src/ToolList";
 import {NewTag, FeaturedTag} from "src/Tags";
 import Image from "src/Image";
+import FilterTag from "src/Tags/FilterTags";
 import './index.css';
 
 type JobProps = {
@@ -35,6 +36,7 @@ const Job: React.FC<JobProps> = ({
   languages,
   tools,
 }: JobProps) => {
+  const tags = [role, level, ...languages, ...tools];
   return (
     <div className="container">
       <div className="position">
@@ -53,7 +55,9 @@ const Job: React.FC<JobProps> = ({
           </div>
         </div>
       </div>
-      <ToolList role={role} languages={languages} tools={tools} level={level} />
+      <ToolList>
+        {tags.map(tag => <FilterTag key={tag}>{tag}</FilterTag>)}
+      </ToolList>
     </div>
   )
 }
