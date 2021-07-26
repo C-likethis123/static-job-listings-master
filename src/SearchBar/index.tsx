@@ -5,8 +5,7 @@ import FilterTag from "src/Tags/FilterTags";
 
 import './index.css';
 
-// TODO: create a tag input component
-const NavBar: React.FC = () => {
+const SearchBar: React.FC = () => {
   const [tags, setTags] = React.useState<string[]>(["Frontend"]);
   const handleAddTags = (event) => {
     if (event.code === "Enter") {
@@ -25,4 +24,4 @@ const NavBar: React.FC = () => {
       );
 }
 
-export default NavBar;
+export default SearchBar;
