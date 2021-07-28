@@ -1,16 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 import ToolList from "src/ToolList";
 import FilterTag from "src/Tags/FilterTags";
 
-import './index.css';
+import {FilterContext} from 'src/FilterContext';
 
+import './index.css';
 const SearchBar: React.FC = () => {
-  const [tags, setTags] = React.useState<string[]>(["Frontend"]);
+  const {tags, handleAdd} = useContext(FilterContext);
+
   const handleAddTags = (event) => {
     if (event.code === "Enter") {
-      const { target: { value } } = event;
-      setTags([...tags, value]);
+      const {target: {value}} = event;
+      handleAdd(value);
       event.target.value = "";
     }
   }
