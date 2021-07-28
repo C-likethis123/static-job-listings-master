@@ -15,7 +15,7 @@ const SearchBar: React.FC = () => {
     }
   }
   return (
-      <div className="container">
+    <div className="searchcontainer">
       <ToolList>
       {tags.map(tag => <FilterTag key={tag} isCancelable>{tag}</FilterTag>)}
       </ToolList>
