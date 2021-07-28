@@ -17,11 +17,11 @@ const SearchBar: React.FC = () => {
   return (
     <div className="searchcontainer">
       <ToolList>
-      {tags.map(tag => <FilterTag key={tag} isCancelable>{tag}</FilterTag>)}
+        {tags.map(tag => <FilterTag key={tag} isCancelable>{tag}</FilterTag>)}
       </ToolList>
-      <input onKeyPress={handleAddTags}className="search" />
-      </div>
-      );
+      <input onKeyPress={handleAddTags} className="search" />
+    </div>
+  );
 }
 
 export default SearchBar;

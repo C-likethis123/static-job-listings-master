@@ -11,8 +11,9 @@ type FilterTagProps = {
 const FilterTag: React.FC<FilterTagProps> = ({
   isCancelable = false,
   children,
-  }) => {
-  return <div className="taginput">{children}</div>
+}) => {
+  const tagClassName = `taginput ${isCancelable ? 'cancelable' : ''}`;
+  return <div className={tagClassName}>{children}</div>
 }
 
 export default FilterTag;
