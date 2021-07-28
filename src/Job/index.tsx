@@ -4,7 +4,7 @@ import React from 'react';
 import ToolList from "src/ToolList";
 import {NewTag, FeaturedTag} from "src/Tags";
 import Image from "src/Image";
-import FilterTag from "src/Tags/FilterTags";
+import JobTag from "src/Tags/JobTag";
 import './index.css';
 
 type JobProps = {
@@ -56,7 +56,7 @@ const Job: React.FC<JobProps> = ({
         </div>
       </div>
       <ToolList>
-        {tags.map(tag => <FilterTag key={tag}>{tag}</FilterTag>)}
+        {tags.map(tag => <JobTag key={tag}>{tag}</JobTag>)}
       </ToolList>
     </div>
   )
