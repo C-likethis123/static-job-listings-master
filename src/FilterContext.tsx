@@ -2,14 +2,14 @@ import React, {createContext, useState} from 'react';
 
 const useInitialiseState = () => {
   const [tags, setTags] = useState<string[]>([]);
-  const handleAdd = (tag: string) => setTags([...tags, tag]);
+  const handleAdd = (tag: string) => setTags(tags.includes(tag) ? tags : [...tags, tag]);
   const handleDelete = (tagToDelete: string) => setTags(tags.filter(tag => tag !== tagToDelete));
   return {
     tags,
     handleAdd,
     handleDelete,
   } as const;
-}
+};
 
 type InitialState = ReturnType<typeof useInitialiseState>;
 export const FilterContext = createContext<InitialState>({} as InitialState);
