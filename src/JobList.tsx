@@ -10,10 +10,10 @@ import data from "src/data.json";
 import Job from "./Job";
 
 const JobList: React.FC = () => {
-  const {tags} = useContext(FilterContext);
+  const {tags = []} = useContext(FilterContext);
   const filteredData = data.filter(({languages, tools, role, level}) => {
     const allInformation = [...languages, ...tools, role, level];
-    return tags.length === 0 || allInformation.some((value) => tags.includes(value));
+    return (tags.length === 0) || allInformation.some((value) => tags.includes(value));
   });
 
   return (
