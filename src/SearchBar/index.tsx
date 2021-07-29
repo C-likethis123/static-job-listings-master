@@ -1,11 +1,12 @@
 import React, {useContext} from 'react';
 
 import ToolList from "src/ToolList";
-import FilterTag from "src/Tags/FilterTags";
+import FilterTag from "src/Tags/FilterTag";
 
 import {FilterContext} from 'src/FilterContext';
 
 import './index.css';
+
 const SearchBar: React.FC = () => {
   const {tags = [], handleAdd} = useContext(FilterContext);
   const handleAddTags = (event) => {
@@ -18,7 +19,7 @@ const SearchBar: React.FC = () => {
   return (
     <div className="searchcontainer">
       <ToolList>
-        {tags.map(tag => <FilterTag key={tag} isCancelable>{tag}</FilterTag>)}
+        {tags.map(tag => <FilterTag key={tag}>{tag}</FilterTag>)}
       </ToolList>
       <div className="clearText">Clear</div>
     </div>
