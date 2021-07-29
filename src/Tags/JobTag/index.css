@@ -8,9 +8,8 @@
   width: max-content;
 }
 
-.taginput:not(.cancelable):hover {
+.taginput:hover, .taginput.selected {
   cursor: pointer;
   background-color: hsl(180, 29%, 50%);
   color: white;
 }
-
