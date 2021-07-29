@@ -17,6 +17,7 @@
 
 .clearText {
   color: hsl(180, 8%, 52%);
+  align-self: center;
 }
 
 .clearText:hover {
