@@ -3,7 +3,7 @@ import {FilterContext} from 'src/FilterContext';
 
 /** Styling */
 import './index.css';
-// TODO make tags cancelable
+
 type JobTagProps = {
   children: string;
 }
@@ -17,7 +17,7 @@ const JobTag: React.FC<JobTagProps> = ({
     !selected ? handleAdd(children) : handleDelete(children);
     setSelected(!selected);
   };
-  return <div className={`taginput ${selected ? 'selected' : ''}`} onClick={handleClick}>{children}</div>
+  return <div className="taginput" onClick={handleClick}>{children}</div>
 }
 
 export default JobTag;
