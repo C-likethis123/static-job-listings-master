@@ -2,3 +2,11 @@
   width: 88px;
   height: 88px;
 }
+
+@media only screen and (max-width: 870px) {
+  .logo {
+    width: 44px;
+    height: 44px;
+    transform: translateY(-50%);
+  }
+}

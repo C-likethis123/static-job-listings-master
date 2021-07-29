@@ -46,3 +46,20 @@
    content: " \2027 ";
    padding: 7px;
 }
+
+@media only screen and (max-width: 870px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .position {
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid hsl(180, 8%, 52%);
+    margin-bottom: 10px;
+  }
+
+  .position-information {
+    padding: unset;
+  }
+}
