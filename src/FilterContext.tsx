@@ -4,10 +4,12 @@ const useInitialiseState = () => {
   const [tags, setTags] = useState<string[]>([]);
   const handleAdd = (tag: string) => setTags(tags.includes(tag) ? tags : [...tags, tag]);
   const handleDelete = (tagToDelete: string) => setTags(tags.filter(tag => tag !== tagToDelete));
+  const handleDeleteAll = () => setTags([]);
   return {
     tags,
     handleAdd,
     handleDelete,
+    handleDeleteAll,
   } as const;
 };
 

@@ -14,3 +14,13 @@
   border: none;
   font-size: 0.9375rem;
 }
+
+.clearText {
+  color: hsl(180, 8%, 52%);
+}
+
+.clearText:hover {
+  color: hsl(180, 29%, 50%);
+  text-decoration: underline;
+  cursor: pointer;
+}
