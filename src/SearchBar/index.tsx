@@ -20,7 +20,7 @@ const SearchBar: React.FC = () => {
       <ToolList>
         {tags.map(tag => <FilterTag key={tag} isCancelable>{tag}</FilterTag>)}
       </ToolList>
-      <input onKeyPress={handleAddTags} className="search" />
+      <div className="clearText">Clear</div>
     </div>
   );
 }

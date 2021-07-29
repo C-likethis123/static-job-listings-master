@@ -1,0 +1,26 @@
+.tagcontainer {
+  padding-right: 10px;
+  flex-wrap: wrap;
+}
+
+.tagcontent {                    
+  background-color: hsl(180, 31%, 95%);
+  border-radius: 5px 0px 0px 5px;
+  padding: 5px;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  width: max-content;
+}                         
+
+.cancel {
+  color: white;
+  padding: 5px;
+  border-radius: 0px 5px 5px 0px;
+  background-color: hsl(180, 29%, 50%);
+  text-align: center;
+}
+
+.cancel:hover {
+  background-color: hsl(180, 14%, 20%);
+  cursor: pointer;
+}
