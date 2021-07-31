@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {FilterContext} from 'src/FilterContext';
 
 /** Styling */
-import './index.css';
+import styles from './index.module.css';
 
 type JobTagProps = {
   children: string;
@@ -17,7 +17,7 @@ const JobTag: React.FC<JobTagProps> = ({
     !selected ? handleAdd(children) : handleDelete(children);
     setSelected(!selected);
   };
-  return <div className="taginput" onClick={handleClick}>{children}</div>
+  return <div className={styles.taginput} onClick={handleClick}>{children}</div>
 }
 
 export default JobTag;

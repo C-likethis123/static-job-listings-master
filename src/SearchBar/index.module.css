@@ -8,13 +8,6 @@
   padding: 20px;
 }
 
-.search {
-  width: 100%;
-  outline: none;
-  border: none;
-  font-size: 0.9375rem;
-}
-
 .clearText {
   color: hsl(180, 8%, 52%);
   align-self: center;

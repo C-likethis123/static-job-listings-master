@@ -1,13 +1,13 @@
 import React from 'react';
 
-import './index.css';
+import styles from './index.module.css';
 
 const NewTag: React.FC = () => (
-  <span className="tag new">NEW!</span>
+  <span className={`${styles.tag} ${styles.new}`}>NEW!</span>
 );
 
 const FeaturedTag: React.FC = () => (
-  <span className="tag featured">FEATURED</span>
+  <span className={`${styles.tag} ${styles.featured}`}>FEATURED</span>
 );
 
 export {NewTag, FeaturedTag};

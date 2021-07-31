@@ -5,7 +5,9 @@ import ToolList from "src/ToolList";
 import {NewTag, FeaturedTag} from "src/Tags";
 import Image from "src/Image";
 import JobTag from "src/Tags/JobTag";
-import './index.css';
+
+/** Styles */
+import styles from './index.module.css';
 
 type JobProps = {
   company: string;
@@ -38,17 +40,17 @@ const Job: React.FC<JobProps> = ({
 }: JobProps) => {
   const tags = [role, level, ...languages, ...tools];
   return (
-    <div className="container">
-      <div className="position">
+    <div className={styles.container}>
+      <div className={styles.position}>
         <Image src={logo} />
-        <div className="position-information">
+        <div className={styles.positionInformation}>
           <div>
-            <span className="company">{company}</span>
+            <span className={styles.company}>{company}</span>
             {isNew && <NewTag />}
             {featured && <FeaturedTag />}
           </div>
-          <div className="position-title">{position}</div>
-          <div className="trivia">
+          <div className={styles.positionTitle}>{position}</div>
+          <div className={styles.trivia}>
             <span>{postedAt}</span>
             <span>{contract}</span>
             <span>{location}</span>

@@ -1,7 +1,7 @@
 import React from 'react';
 
-/** Types */
-import './index.css';
+/** Styles */
+import styles from './index.module.css';
 
 type ToolListProps = {
   children: React.ReactElement | React.ReactElement[],
@@ -11,7 +11,7 @@ const ToolList: React.FC<ToolListProps> = ({
   children,
 }) => {
   return (
-    <div className="toollist">
+    <div className={styles.toollist}>
       {children}
     </div>
   )

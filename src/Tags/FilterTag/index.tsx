@@ -4,7 +4,7 @@ import React, {useContext} from 'react';
 import {FilterContext} from "src/FilterContext";
 
 /** Styling */
-import './index.css';
+import styles from './index.module.css';
 
 type FilterTagProps = {
   children: string;
@@ -15,9 +15,9 @@ const FilterTag: React.FC<FilterTagProps> = ({
 }) => {
   const {handleDelete} = useContext(FilterContext);
   return (
-    <span className="tagcontainer">
-      <span className="tagcontent">{children}</span>
-      <span className="cancel" onClick={() => handleDelete(children)}>X</span>
+    <span className={styles.container}>
+      <span className={styles.content}>{children}</span>
+      <span className={styles.cancel} onClick={() => handleDelete(children)}>X</span>
     </span>
   );
 };

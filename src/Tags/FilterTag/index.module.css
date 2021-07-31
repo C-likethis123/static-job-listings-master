@@ -1,9 +1,9 @@
-.tagcontainer {
+.container {
   padding: 10px;
   flex-wrap: wrap;
 }
 
-.tagcontent {                    
+.content {                    
   background-color: hsl(180, 31%, 95%);
   border-radius: 5px 0px 0px 5px;
   padding: 5px;

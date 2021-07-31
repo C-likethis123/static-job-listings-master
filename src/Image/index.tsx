@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.css';
+import styles from './index.module.css';
 
 type ImageProps = {
   src: string;
@@ -9,7 +9,7 @@ type ImageProps = {
 const Image: React.FC<ImageProps> = ({src}) => {
   const imgUrl = new URL(src, import.meta.url);
   //@ts-ignore
-  return (<img src={imgUrl} className="logo" />);
+  return (<img src={imgUrl} className={styles.logo} />);
 }
 
 export default Image;
