@@ -1,8 +1,8 @@
 language: node_js
 node_js:
-  - lts/*
+  - 15.5.0
 install:
-  - yarn install --frozen-lockfile
+  - yarn --frozen-lockfile
 script:
   - yarn build
 deploy:
