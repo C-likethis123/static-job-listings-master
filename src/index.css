@@ -9,6 +9,18 @@
   font-family: "Spartan";
 }
 
-body {
+.app-container {
   padding: 5vh;
+  padding-top: 20vh;
+}
+
+body {
+  background: url("/images/bg-header-desktop.svg") 0% 0% / 100% 4% no-repeat border-box;
+
+}
+
+@media only screen and (max-width: 870px) {
+  body {
+    background-image: url("/images/bg-header-mobile.svg") 0% 0% / 100% 4% no-repeat border-box;
+  }
 }

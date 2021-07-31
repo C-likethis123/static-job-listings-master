@@ -1,19 +1,19 @@
 import React from 'react';
 
-import './index.css';
-// TODO: make app responsive
-// TODO: make app background
-
 /** Contexts */
 import FilterProvider from './FilterContext';
 
 /** Components */
 import SearchBar from "./SearchBar";
 import JobList from "./JobList";
+
+/** Styles */
+import './index.css';
+
 const App: React.FC = () => {
   return (
     <FilterProvider>
-      <div>
+      <div className="app-container">
         <SearchBar />
         <JobList />
       </div>
